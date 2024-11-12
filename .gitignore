@@ -1,0 +1,4 @@
+# Exclude build artifacts
+**/obj/
+**/bin/
+**/dist/
