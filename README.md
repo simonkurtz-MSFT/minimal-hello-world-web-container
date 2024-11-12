@@ -18,5 +18,27 @@ You can also test it via curl: `curl -v http://localhost:8080`
 
 1. You can use something like the VS Code Docker Extension (`CTRL + Shift + P` -> *Docker: Add Docker Files to Workspace...*) or edit  *Dockerfile* in the *HelloWorld* folder from this repo.
 1. Ensure Docker (or podman or similar) is running, switch to the root in your terminal, then execute `docker build -t hello-world -f .\HelloWorld\Dockerfile .` to create the first image.
-1. Run the container via `docker run -d -p 8080:8080 --name hello-world-container hello-world`.
+1. Run the container via `docker run -d -p 8080:8080 --name hello-world hello-world`.
+1. Use a browser or curl to test.
 
+## How to Optmize the Container
+
+Run `docker image ls` to see the image you just created. Using `mcr.microsoft.com/dotnet/aspnet:9.0 AS base` as the base image for this very simple *Hello World* container creates a 224 MB container. We follow [Module 12 - Optmize Containers](https://azure.github.io/aca-dotnet-workshop/aca/12-optimizes/) of the Azure Container Apps .NET Workshop to create a smaller container:
+
+### Regular Container
+
+1. `docker build -t hello-world -f .\HelloWorld\Dockerfile .`
+1. `docker run -d -p 8080:8080 --name hello-world hello-world`
+1. [http://localhost:8080]
+
+### Chiseled Container
+
+1. `docker build -t hello-world-chiseled -f .\HelloWorld\Dockerfile.chiseled .`
+1. `docker run -d -p 8081:8080 --name hello-world-chiseled hello-world-chiseled`.
+1. [http://localhost:8081]
+
+### Chiseled Ahead-of-Time (AOT) Container
+
+1. `docker build -t hello-world-chiseled-aot -f .\HelloWorld\Dockerfile.chiseled.aot .`
+1. `docker run -d -p 8082:8080 --name hello-world-chiseled-aot hello-world-chiseled-aot`.
+1. [http://localhost:8082]
