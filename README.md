@@ -10,7 +10,13 @@ Some steps are referenced from the [Azure Container Apps .NET Workshop](https://
 1. Create a new, minimal web API: `dotnet new webapi -n HelloWorld`
 1. Change directories to *HelloWorld* and build the project: `dotnet build`
 1. Strip down the project as much as you want.
-1. Set up the dev cert via `dotnet dev-certs https --trust`.
-1. Execute `dotnet run` and open both http and https URLs. A request to the root simply returns a *Hello World!* string. Note that I left both configured depending on how you may want to reach the web app.
+1. Execute `dotnet run` and open both [http://localhost:8080]. A request to the root simply returns a *Hello World!* string.
 
-You can also test it via curl: `curl -v http://localhost:5080` and `curl -v https://localhost:5443`.
+You can also test it via curl: `curl -v http://localhost:8080`
+
+## How to Create & Test the Container
+
+1. You can use something like the VS Code Docker Extension (`CTRL + Shift + P` -> *Docker: Add Docker Files to Workspace...*) or edit  *Dockerfile* in the *HelloWorld* folder from this repo.
+1. Ensure Docker (or podman or similar) is running, switch to the root in your terminal, then execute `docker build -t hello-world -f .\HelloWorld\Dockerfile .` to create the first image.
+1. Run the container via `docker run -d -p 8080:8080 --name hello-world-container hello-world`.
+
