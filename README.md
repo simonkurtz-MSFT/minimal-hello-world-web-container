@@ -11,7 +11,7 @@ Some steps are referenced from the [Azure Container Apps .NET Workshop](https://
 1. Create a new, minimal web API: `dotnet new webapi -n HelloWorld`
 1. Change directories to *HelloWorld* and build the project: `dotnet build`
 1. Strip down the project as much as you want.
-1. Execute `dotnet run` and open S[http://localhost:8080]. A request to the root simply returns a *Hello World!* string.
+1. Execute `dotnet run` and open http://localhost:8080. A request to the root simply returns a *Hello World!* string.
 
 You can also test it via curl: `curl -v http://localhost:8080`
 
