@@ -15,9 +15,9 @@ Some steps are referenced from the [Azure Container Apps .NET Workshop](https://
 
 You can also test it via curl: `curl -v http://localhost:8080`
 
-## Create & Optmize the Container
+## Create & Optimize the Container
 
-We follow [Module 12 - Optmize Containers](https://azure.github.io/aca-dotnet-workshop/aca/12-optimizes/) of the Azure Container Apps .NET Workshop to create a smaller container:
+We follow [Module 12 - Optimize Containers](https://azure.github.io/aca-dotnet-workshop/aca/12-optimize-containers/) of the Azure Container Apps .NET Workshop to create a smaller container:
 Run `docker image ls` to see all images and their sizes after executing the below `docker build` commands.
 
 ### Regular Container
