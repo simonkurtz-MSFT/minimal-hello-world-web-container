@@ -30,7 +30,7 @@ The image size will be ~224 MB.
 
 ### Chiseled Container
 
-For a .NET Web API, the smallest base image we can use is a chiseled ASP.NET image (see *Dockerfile.chiseled*)
+For a .NET Web API, the smallest base image we can use is a chiseled ASP.NET image (see *Dockerfile.chiseled*). See [.NET Container Images](https://learn.microsoft.com/dotnet/core/docker/container-images#images-optimized-for-size) for details.
 
 1. `docker build -t hello-world-chiseled -f .\Dockerfile.chiseled .`
 1. `docker run -p 8081:8080 hello-world-chiseled`
