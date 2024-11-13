@@ -1,10 +1,6 @@
 var builder = WebApplication.CreateBuilder(args);
 
-builder.WebHost.ConfigureKestrel(options =>
-{
-    options.ListenAnyIP(8080);
-    options.AddServerHeader = false;        // remove the Server header
-});
+builder.WebHost.ConfigureKestrel(options => options.ListenAnyIP(8080));
 
 var app = builder.Build();
 
