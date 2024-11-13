@@ -2,6 +2,8 @@
 
 This repo contains a minimal web API container that can be used to quickly ascertain that a container can serve requests. This is helpful, for example, when verifying connectivity to Azure Container Apps and other container hosting platforms.
 
+The images are hosted on [Docker Hub](https://hub.docker.com/r/simonkurtzmsft/minimal-hello-world-web).
+
 ## Create & Test the Web API
 
 1. Download the [.NET 9 SDK](https://dotnet.microsoft.com/download/dotnet/9.0).
