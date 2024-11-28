@@ -1,0 +1,4 @@
+FROM busybox
+EXPOSE 8080
+
+ENTRYPOINT ["sh", "-c", "while true; do echo -e 'HTTP/1.1 200 OK\r\nContent-Type: text/html; charset=UTF-8\r\n\r\n<html><body>Hello World!</body></html>' | nc -l -p 8080 -k; done"]
