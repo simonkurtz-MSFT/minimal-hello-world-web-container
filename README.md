@@ -33,7 +33,7 @@ The compressed image size will be ~89.4 MB.
 
 ### Chiseled Container
 
-For a .NET Web API, a typical, optimized base image to use is a chiseled ASP.NET image (see *Dockerfile.chiseled*). See [.NET Container Images](https://learn.microsoft.com/dotnet/core/docker/container-images#images-optimized-for-size) for details.
+For a .NET Web API, a typical, optimized base image to use is a chiseled ASP.NET image (see [Dockerfile.chiseled](./HelloWorld/Dockerfile.chiseled)). See [.NET Container Images](https://learn.microsoft.com/dotnet/core/docker/container-images#images-optimized-for-size) for details.
 
 1. `docker build -t hello-world-chiseled -f .\Dockerfile.chiseled .`
 1. `docker run -p 8081:8080 hello-world-chiseled`
@@ -44,7 +44,7 @@ The compressed image size will be ~49.31 MB.
 
 ### Self-Contained, Trimmed Container
 
-For a .NET Web API, the smallest base image we can use is a chiseled ASP.NET image (see *Dockerfile.chiseled*). See [.NET Container Images](https://learn.microsoft.com/dotnet/core/docker/container-images#images-optimized-for-size) for details.
+For a .NET Web API, the smallest base image we can use is a chiseled ASP.NET image (see [Dockerfile.trimmed](./HelloWorld/Dockerfile.trimmed)). See [.NET Container Images](https://learn.microsoft.com/dotnet/core/docker/container-images#images-optimized-for-size) for details.
 
 1. `docker build -t hello-world-trimmed -f .\Dockerfile.trimmed .`
 1. `docker run -p 8082:8080 hello-world-trimmed`
